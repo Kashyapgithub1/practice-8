@@ -1,0 +1,79 @@
+#Q1. Input n cities in a tuple and find out those cities which starts with similar pattern.
+city=()
+s = int(input("enter number of cities you want to enter cities: "))
+for i in range(s):
+  c=input("enter city:")
+  city = city+(c,)
+pattern= input("enter pattern : ")
+for t in city:
+  if (t.startswith(pattern)):
+   print(t)
+   
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Q2. Enter 'n' drinks and their prices in a tuple.
+drinks=()
+d = int(input("enter number of drinks you want to buy "))
+for i in range(d):
+  c=input("enter drinks:")
+  p= input("enter price : ")
+  t = (c,p)
+  drinks = drinks +(t,)
+print(drinks)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Q3.Enter 'n' drinks and their prices in a tuple and print those drinks whose price is above 100.
+drinks=()
+d = int(input("enter number of drinks you want to buy "))
+for i in range(d):
+  c=input("enter drinks:")
+  p=int(input("enter price : "))
+  t = (c,p)
+  drinks = drinks +(t,)
+print(drinks)
+for p in drinks:
+  if (p[1]<=100):
+   print("drinks above 100 rupees are:",c)
+   
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Q4. students=()
+s= int(input("enter number of students you want to enter the marks of: "))
+for i in range(s):
+  n= input("enter the name of the student:")
+  m=int(input("enter marks of maths:"))
+  c=int(input("enter marks of chemistry:"))
+  p=int(input("enter marks of physics:"))
+  t = (n,m,c,p)
+  students = students + (t,)
+  s = m + c + p
+  g = print("your total marks of PCM are: ", s)
+  d = ((s * 100) / 300)
+  o = '{:.2f}'.format(d)
+  f = print("your percentage is:{0}%".format(o))
+  
+for j in students:
+  if(s>=60):
+    print(students,s,o,"you passed the exams with flying colours!")
+    break
+  else:
+    print(students,s,o,"you failed! Better try next time!")
+
+OR OR OR 
+students=()
+s= int(input("enter number of students you want to enter the marks of: "))
+for i in range(s):
+  n= input("enter the name of the student:")
+  m=int(input("enter marks of maths:"))
+  c=int(input("enter marks of chemistry:"))
+  p=int(input("enter marks of physics:"))
+  t = (n,m,c,p)
+  students = students + (t,)
+
+for std in students:
+  o= std[1]+std[2]+std[3]
+  d = s/3
+  #f = print("your percentage is:{0}%".format(o))
+  if(s>=60):
+    print(std,s,d,"you passed the exams with flying colours!")
+  else:
+    print(std,s,d,"you failed! Better try next time!")
+
